@@ -4,7 +4,7 @@ const axios = require('axios');
 const fs = require('fs')
 const cheerio = require('cheerio');
 
-const sessionToken  = fs.readFileSync("token.txt",{encoding:'utf8', flag:'r'})
+const sessionToken  = fs.readFileSync("../secrets/token.txt",{encoding:'utf8', flag:'r'})
 const regexFindHtml = new RegExp(fs.readFileSync("regex.txt",{encoding:'utf8', flag:'r'}).toString(), 'gm');
 
 const get_name_of_day  = (daynumber) => {
