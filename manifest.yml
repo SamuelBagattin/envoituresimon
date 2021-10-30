@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  labels:
+    run: envoituresimone
+  name: envoituresimone
+  namespace: default
+spec:
+  schedule: "0 20 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - image: ghcr.io/samuelbagattin/envoituresimone:0.4.0
+              imagePullPolicy: IfNotPresent
+              name: envoituresimone
+              volumeMounts:
+                - name: token
+                  mountPath: /app/secrets
+                  readOnly: true
+          volumes:
+            - name: token
+              secret:
+                secretName: envoituresimone-token
+---
