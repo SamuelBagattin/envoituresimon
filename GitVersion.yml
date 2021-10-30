@@ -1,0 +1,14 @@
+assembly-versioning-scheme: MajorMinorPatch
+mode: Mainline
+tag-prefix: '^([a-zA-Z.]+)'
+branches:
+  master:
+    increment: Minor
+  feature:
+    increment: Minor
+  hotfix:
+    tag: useBranchName
+    increment: Patch
+  release:
+    tag: ''
+    increment: Patch
