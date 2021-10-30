@@ -1,0 +1,1 @@
+\$\('#flash-messages'\)\.html\("<div\sid=\\'flash-messages\\'>\\n<\\\/div>\\n"\);\n\s*\$\('#results-container'\)\.html\("(.*)"\);\n$
