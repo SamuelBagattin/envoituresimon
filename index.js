@@ -25,6 +25,8 @@ const get_name_of_day  = (daynumber) => {
     }
 }
 
+
+
 const get_dispos = async (formatedDate) => {
     var config = {
         method: 'get',
